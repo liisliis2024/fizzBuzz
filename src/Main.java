@@ -7,15 +7,12 @@ public class Main {
 
         for (int i = 1; i < count + 1; i++) {
 
-            boolean divisibleByFive = i % 5 == 0;
-            boolean divisibleByThree = i % 3 == 0;
-
             String line = "";
 
-            if (divisibleByThree) {
+            if (i % 3 == 0) {
                 line += "Fizz";
             }
-            if (divisibleByFive) {
+            if (i % 5 == 0) {
                 line += "Buzz";
             }
             if (line.isEmpty()) {
