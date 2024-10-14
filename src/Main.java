@@ -1,20 +1,28 @@
-//TIP To <b>Run</b> code, press <shortcut actionId="Run"/> or
-// click the <icon src="AllIcons.Actions.Execute"/> icon in the gutter.
+
+
 public class Main {
     public static void main(String[] args) {
 
-        int count = 100;
+        int count = 15;
 
         for (int i = 1; i < count + 1; i++) {
-            if (i % 3 == 0 && i % 5 == 0) {
-                System.out.println("FizzBuzz");
-            } else if (i % 3 == 0) {
-                System.out.println("Fizz");
-            } else if (i % 5 == 0) {
-                System.out.println("Buzz");
-            } else {
-                System.out.println(i);
+
+            boolean divisibleByFive = i % 5 == 0;
+            boolean divisibleByThree = i % 3 == 0;
+
+            String line = "";
+
+            if (divisibleByThree) {
+                line += "Fizz";
             }
+            if (divisibleByFive) {
+                line += "Buzz";
+            }
+            if (line.isEmpty()) {
+                line += Integer.toString(i);
+            }
+            System.out.println(line);
+
         }
     }
 }
